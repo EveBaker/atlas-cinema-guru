@@ -1,0 +1,82 @@
+/* inputs */
+.input-wrapper {
+    margin-bottom: 16px;
+  }
+  
+  .input-wrapper label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .input-icon {
+    margin-right: 8px;
+  }
+  
+  .input-element {
+    border: none;
+    outline: none;
+    flex: 1;
+  }
+  
+  .input-element:focus {
+    border-bottom: 2px solid red;
+  }
+  
+  .input-element-dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  .input-element-dark:focus {
+    border-bottom: 2px solid red;
+  }
+/*-------------------------------------------------------------------------------------------------*/
+
+/* select-input */
+
+.select-input-wrapper {
+    margin-bottom: 16px;
+    position: relative;
+    display: block;
+  }
+  
+  .select-input-wrapper label {
+    display: block;
+    margin-bottom: 4px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .select-element {
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  .select-element:focus {
+    border-color: red;
+    outline: none;
+  }
+  
+  /* Styling for the dropdown arrow */
+  .select-element {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1.41%200.589966L6%205.16997L10.59%200.589966L12%201.99997L6%207.99997L0%201.99997L1.41%200.589966Z%22%20fill%3D%22white%22%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
