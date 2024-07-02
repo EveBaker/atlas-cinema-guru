@@ -111,3 +111,25 @@
   .button svg {
     margin-right: 8px; /* space between icon and text */
   }
+
+  /*-------------------------------------------------------------------------------------------------*/
+
+  /* search bar */
+  .search-bar {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
+  .search-bar::placeholder {
+    color: #888;
+  }
+  
+  .search-bar:focus {
+    outline: none;
+    border-color: #555;
+  }
