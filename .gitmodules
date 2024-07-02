@@ -1,0 +1,3 @@
+[submodule "atlas-cinema-guru-backend"]
+	path = atlas-cinema-guru-backend
+	url = https://github.com/EveBaker/atlas-cinema-guru-backend.git
