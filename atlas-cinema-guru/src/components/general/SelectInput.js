@@ -1,29 +1,19 @@
 import React from 'react';
 import './general.css';
 
-const SelectInput = ({
-    label,
-    options,
-    className,
-    value,
-    setValue
-  }) => {
-    const handleSelect = (event) => {
-      setValue(event.target.value);
-    };
-    
-    return (
-        <div className={`select-input-wrapper ${className}`}>
-            {label && <label>{label}</label>}
-            <select value={value} onChange={handleSelect} className="select-element">
-                {options.map(Option => (
-                    <option key={option.value} value={option.value}>
-                        {option.label}
-                    </option>
-                ))}
-            </select>
-        </div>
-    );
-  }; 
+const SelectInput = ({ label, options, value, onChange }) => {
+  return (
+    <div className="select-input">
+      {label && <label>{label}</label>}
+      <select value={value} onChange={onChange}>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
 
-  export default SelectInput;
+export default SelectInput;

@@ -1,0 +1,105 @@
+/* Container for the entire authentication form */
+.auth-container {
+  width: 350px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section for Sign In and Sign Up buttons */
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Individual header buttons */
+.auth-header button {
+  width: 50%;
+  padding: 10px;
+  background-color: #c00; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.auth-header button.active {
+  background-color: #a00;
+}
+
+.auth-header button.inactive {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Form section */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input fields */
+.auth-form input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #c00;
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-bottom-color: #a00;
+}
+
+.auth-form label {
+  width: 90%;
+  text-align: left;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Sign In button */
+.auth-form button.sign-in-button {
+  width: 90%;
+  padding: 10px;
+  background-color: #c00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.auth-form button.sign-in-button:hover {
+  background-color: #a00;
+}
+
+
+.auth-form .input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c00;
+}
+
+.auth-form .input-container {
+  position: relative;
+  width: 90%;
+}
+
+.auth-form .input-element {
+  padding-left: 30px; 
+  padding-bottom: 5px;
+}
