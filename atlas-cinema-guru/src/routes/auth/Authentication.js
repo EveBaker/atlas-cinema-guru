@@ -13,7 +13,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const url = switchBoolean ? '/api/auth/login' : '/api/auth/register';
+    const url = switchBoolean ? 'http://localhost:8000/api/auth/login' : 'http://localhost:8000/api/auth/register';
     const data = { username, password };
 
     axios.post(url, data)
@@ -34,6 +34,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
   };
 
   return (
+    <div className="auth-body">
     <div className="auth-container">
       <div className="auth-header">
         <button
@@ -57,7 +58,6 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
             setUsername={setUsername}
             setPassword={setPassword}
             handleLogin={handleSubmit}
-            showPassword={showPassword}
             togglePasswordVisibility={togglePasswordVisibility}
           />
         ) : (
@@ -67,11 +67,11 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
             setUsername={setUsername}
             setPassword={setPassword}
             handleRegister={handleSubmit}
-            showPassword={showPassword}
             togglePasswordVisibility={togglePasswordVisibility}
           />
         )}
       </form>
+    </div>
     </div>
   );
 };

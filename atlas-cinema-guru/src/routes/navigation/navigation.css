@@ -1,0 +1,45 @@
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info p {
+    margin: 0 10px;
+  }
+  
+  .logout {
+    cursor: pointer;
+    color: #c00;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout .fa-sign-out-alt {
+    margin-right: 5px;
+  }
+
+
+  
+  

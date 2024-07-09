@@ -103,3 +103,13 @@
   padding-left: 30px; 
   padding-bottom: 5px;
 }
+
+
+.auth-body {
+  text-align: center;
+  background-color: #1c1c1c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
