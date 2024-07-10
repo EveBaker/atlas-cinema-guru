@@ -3,6 +3,7 @@ import './auth.css';
 import Login from './Login';
 import Register from './Register';
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
 const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
   const [switchBoolean, setSwitchBoolean] = useState(true);
@@ -18,13 +19,22 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
 
     axios.post(url, data)
       .then(response => {
-        const { accessToken } = response.data;
-        localStorage.setItem('accessToken', accessToken);
-        setIsLoggedIn(true);
-        setUserUsername(username);
+        if (response.status === 200 || response.status === 201) {
+          const { accessToken } = response.data;
+          localStorage.setItem('accessToken', accessToken);
+
+          const decodedToken = jwtDecode(accessToken);
+          const { username: decodedUsername } = decodedToken;
+
+          setIsLoggedIn(true);
+          setUserUsername(decodedUsername);
+        } else {
+          console.error(`${switchBoolean ? 'Login' : 'Registration'} failed:`, response.data);
+          alert(`${switchBoolean ? 'Login' : 'Registration'} failed. Please try again.`);
+        }
       })
       .catch(error => {
-        console.error(`${switchBoolean ? 'Login' : 'Registration'} error:`, error);
+        console.error(`${switchBoolean ? 'Login' : 'Registration'} error:`, error.response || error.message || error);
         alert(`${switchBoolean ? 'Login' : 'Registration'} failed. Please try again.`);
       });
   };
@@ -35,43 +45,43 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
 
   return (
     <div className="auth-body">
-    <div className="auth-container">
-      <div className="auth-header">
-        <button
-          className={switchBoolean ? 'active' : ''}
-          onClick={() => setSwitchBoolean(true)}
-        >
-          Sign In
-        </button>
-        <button
-          className={!switchBoolean ? 'active' : ''}
-          onClick={() => setSwitchBoolean(false)}
-        >
-          Sign Up
-        </button>
+      <div className="auth-container">
+        <div className="auth-header">
+          <button
+            className={switchBoolean ? 'active' : ''}
+            onClick={() => setSwitchBoolean(true)}
+          >
+            Sign In
+          </button>
+          <button
+            className={!switchBoolean ? 'active' : ''}
+            onClick={() => setSwitchBoolean(false)}
+          >
+            Sign Up
+          </button>
+        </div>
+        <form onSubmit={handleSubmit}>
+          {switchBoolean ? (
+            <Login
+              username={username}
+              password={password}
+              setUsername={setUsername}
+              setPassword={setPassword}
+              showPassword={showPassword}
+              togglePasswordVisibility={togglePasswordVisibility}
+            />
+          ) : (
+            <Register
+              username={username}
+              password={password}
+              setUsername={setUsername}
+              setPassword={setPassword}
+              showPassword={showPassword}
+              togglePasswordVisibility={togglePasswordVisibility}
+            />
+          )}
+        </form>
       </div>
-      <form onSubmit={handleSubmit}>
-        {switchBoolean ? (
-          <Login
-            username={username}
-            password={password}
-            setUsername={setUsername}
-            setPassword={setPassword}
-            handleLogin={handleSubmit}
-            togglePasswordVisibility={togglePasswordVisibility}
-          />
-        ) : (
-          <Register
-            username={username}
-            password={password}
-            setUsername={setUsername}
-            setPassword={setPassword}
-            handleRegister={handleSubmit}
-            togglePasswordVisibility={togglePasswordVisibility}
-          />
-        )}
-      </form>
-    </div>
     </div>
   );
 };

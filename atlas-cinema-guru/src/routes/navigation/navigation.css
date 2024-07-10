@@ -40,6 +40,57 @@
     margin-right: 5px;
   }
 
-
+  .sidebar {
+    width: 50px;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    top: -10;
+    left: 0;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .sidebar:hover {
+    width: 250px;
+  }
+  
+  .nav-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .nav-item {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #b71c1c;
+  }
+  
+  .nav-item .icon {
+    margin-right: 10px;
+  }
+  
+  .nav-item .label {
+    display: none;
+  }
+  
+  .sidebar:hover .nav-item .label {
+    display: inline;
+  }
+  
+  .nav-item.active {
+    background-color: #b71c1c;
+  }
   
   

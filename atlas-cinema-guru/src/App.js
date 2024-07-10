@@ -11,7 +11,7 @@ const App = () => {
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
     if (accessToken) {
-      axios.post('http://localhost:8000/routes/auth/', {}, {
+      axios.post('http://localhost:8000/api/auth/', {}, {
         headers: { Authorization: `Bearer ${accessToken}` }
       })
       .then(response => {

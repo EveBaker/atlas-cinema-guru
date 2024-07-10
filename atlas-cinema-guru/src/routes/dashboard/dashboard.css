@@ -6,8 +6,24 @@
   
   .dashboard-content {
     padding: 20px;
+    align-items: center;
   }
   
   .dashboard h1 {
-    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: fit-content;
   }
+
+  .dashboard h2 {
+    color: var(--white);
+    border-bottom: 0.25rem solid var(--white);
+    text-align: center;
+  }
+
+  
+  
