@@ -1,0 +1,44 @@
+.home {
+  padding: 20px;
+  align-items: center;
+}
+.homepage h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: fit-content;
+  }
+
+  .fav {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .fav h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin: auto;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      width: fit-content;
+    }
+
+    .later {
+      padding: 20px;
+      align-items: center;
+    }
+    
+    .later h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        width: fit-content;
+      }
+    
