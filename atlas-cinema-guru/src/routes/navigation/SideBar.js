@@ -14,55 +14,55 @@ const placeholderActivities = [
   },
   {
     id: "2",
-    username: "user2",
+    username: "user1",
     title: "title2",
     date: "date2"
   },
   {
     id: "3",
-    username: "user3",
+    username: "user1",
     title: "title3",
     date: "date3"
   },
   {
     id: "4",
-    username: "user4",
+    username: "user1",
     title: "title4",
     date: "date4"
   },
   {
     id: "5",
-    username: "user5",
+    username: "user1",
     title: "title5",
     date: "date5"
   },
   {
     id: "6",
-    username: "user6",
+    username: "user1",
     title: "title6",
     date: "date6"
   },
   {
     id: "7",
-    username: "user7",
+    username: "user1",
     title: "title7",
     date: "date7"
   },
   {
     id: "8",
-    username: "user8",
+    username: "user1",
     title: "title8",
     date: "date8"
   },
   {
     id: "9",
-    username: "user9",
+    username: "user1",
     title: "title9",
     date: "date9"
   },
   {
     id: "10",
-    username: "user10",
+    username: "user1",
     title: "title10",
     date: "date10"
   },
