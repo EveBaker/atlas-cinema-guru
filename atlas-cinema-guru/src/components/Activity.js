@@ -1,5 +1,3 @@
-// src/components/Activity.js
-
 import React from 'react';
 import './components.css';
 

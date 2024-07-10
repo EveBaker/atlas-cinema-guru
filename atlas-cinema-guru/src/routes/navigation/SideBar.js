@@ -9,62 +9,62 @@ const placeholderActivities = [
   {
     id: "1",
     username: "user1",
-    title: "title1",
-    date: "date1"
+    title: "The Murder House",
+    date: "March 21st, 2022"
   },
   {
     id: "2",
     username: "user1",
-    title: "title2",
-    date: "date2"
+    title: "Grotesque",
+    date: "March 22nd, 2022"
   },
   {
     id: "3",
     username: "user1",
-    title: "title3",
-    date: "date3"
+    title: "Revelation: The Unveiling",
+    date: "March 23rd, 2022"
   },
   {
     id: "4",
     username: "user1",
-    title: "title4",
-    date: "date4"
+    title: "8 Days with Hopper",
+    date: "March 24th, 2022"
   },
   {
     id: "5",
     username: "user1",
-    title: "title5",
-    date: "date5"
+    title: "The Key",
+    date: "March 25th, 2022"
   },
   {
     id: "6",
     username: "user1",
-    title: "title6",
-    date: "date6"
+    title: "Godhead: in a fiction, in dream of passion",
+    date: "March 26th, 2022"
   },
   {
     id: "7",
     username: "user1",
-    title: "title7",
-    date: "date7"
+    title: "Revelation: The Unveiling",
+    date: "March 27th, 2022"
   },
   {
     id: "8",
     username: "user1",
-    title: "title8",
-    date: "date8"
+    title: "Godhead: in a fiction, in dream of passion",
+    date: "March 28th, 2022"
   },
   {
     id: "9",
     username: "user1",
-    title: "title9",
-    date: "date9"
+    title: "The Key",
+    date: "March 29th, 2022"
   },
   {
     id: "10",
     username: "user1",
-    title: "title10",
-    date: "date10"
+    title: "8 Days with Hopper",
+    date: "March 30th, 2022"
   },
 ];
 
