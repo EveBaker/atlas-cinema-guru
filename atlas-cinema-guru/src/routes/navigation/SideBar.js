@@ -68,8 +68,6 @@ const placeholderActivities = [
   },
 ];
 
-
-
 const SideBar = () => {
   const [selected, setSelected] = useState('home');
   const navigate = useNavigate();
