@@ -23,8 +23,52 @@ const placeholderActivities = [
     username: "user3",
     title: "title3",
     date: "date3"
-  }
+  },
+  {
+    id: "4",
+    username: "user4",
+    title: "title4",
+    date: "date4"
+  },
+  {
+    id: "5",
+    username: "user5",
+    title: "title5",
+    date: "date5"
+  },
+  {
+    id: "6",
+    username: "user6",
+    title: "title6",
+    date: "date6"
+  },
+  {
+    id: "7",
+    username: "user7",
+    title: "title7",
+    date: "date7"
+  },
+  {
+    id: "8",
+    username: "user8",
+    title: "title8",
+    date: "date8"
+  },
+  {
+    id: "9",
+    username: "user9",
+    title: "title9",
+    date: "date9"
+  },
+  {
+    id: "10",
+    username: "user10",
+    title: "title10",
+    date: "date10"
+  },
 ];
+
+
 
 const SideBar = () => {
   const [selected, setSelected] = useState('home');
