@@ -16,4 +16,27 @@
   .tag.filter {
     font-weight: bold;
   }
-  
+/*------------------------------- */
+
+.filter-container {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.year-input {
+  margin-bottom: 16px;
+}
+
+.sort-select {
+  margin-bottom: 16px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
