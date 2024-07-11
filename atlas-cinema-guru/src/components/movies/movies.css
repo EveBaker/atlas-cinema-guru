@@ -17,26 +17,51 @@
     font-weight: bold;
   }
 /*------------------------------- */
-
 .filter-container {
   padding: 16px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
   margin-bottom: 16px;
 }
 
-.year-input {
-  margin-bottom: 16px;
+.filter-row .year-input,
+.filter-row .sort-select {
+  margin-right: 16px;
+  flex: 1;
 }
 
-.sort-select {
-  margin-bottom: 16px;
-}
-
-.tags-list {
+.filter-row .tags-list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+  margin-top: 16px;
+}
+
+.tags-list .tag {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 1px solid #ff4d4d; 
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.tags-list .tag.selected {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.input-icon {
+  color: #ff4d4d;
+}
+
+.input-wrapper label {
+  color: #ff4d4d;
 }

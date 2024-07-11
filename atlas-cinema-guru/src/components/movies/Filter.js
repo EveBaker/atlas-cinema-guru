@@ -18,41 +18,48 @@ const Filter = ({
   setTitle,
 }) => {
   const tags = [
-    "action", "drama", "comedy", "biography", "romance",
-    "thriller", "war", "history", "sport", "sci-fi",
-    "documentary", "crime", "fantasy"
+    "Action", "Drama", "Comedy", "Biography", "Romance",
+    "Thriller", "War", "History", "Sport", "Sci-Fi",
+    "Documentary", "Crime", "Fantasy"
   ];
 
   return (
     <div className="filter-container">
-      <SearchBar title={title} setTitle={setTitle} />
-      <Input
-        label="Min Year"
-        type="number"
-        className="year-input"
-        value={minYear}
-        setValue={setMinYear}
-      />
-      <Input
-        label="Max Year"
-        type="number"
-        className="year-input"
-        value={maxYear}
-        setValue={setMaxYear}
-      />
-      <SelectInput
-        label="Sort By"
-        className="sort-select"
-        value={sort}
-        setValue={setSort}
-        options={[
-          { value: "latest", label: "Latest" },
-          { value: "oldest", label: "Oldest" },
-          { value: "highestrated", label: "Highest Rated" },
-          { value: "lowestrated", label: "Lowest Rated" },
-        ]}
-      />
-      <ul className="tags-list">
+      <div className="filter-controls">
+        <SearchBar title={title} setTitle={setTitle} />
+        <div className="year-inputs">
+          <Input
+            label="Min Date:"
+            type="number"
+            className="year-input"
+            value={minYear}
+            setValue={setMinYear}
+            inputAttributes={{ placeholder: "1970" }}
+          />
+          <Input
+            label="Max Date:"
+            type="number"
+            className="year-input"
+            value={maxYear}
+            setValue={setMaxYear}
+            inputAttributes={{ placeholder: "2022" }}
+          />
+        </div>
+        <SelectInput
+          label="Sort:"
+          className="sort-select"
+          value={sort}
+          setValue={setSort}
+          options={[
+            { value: "default", label: "Default" },
+            { value: "latest", label: "Latest" },
+            { value: "oldest", label: "Oldest" },
+            { value: "highestrated", label: "Highest Rated" },
+            { value: "lowestrated", label: "Lowest Rated" },
+          ]}
+        />
+      </div>
+      <div className="tags-list">
         {tags.map((tag) => (
           <Tag
             key={tag}
@@ -62,7 +69,7 @@ const Filter = ({
             setGenres={setGenres}
           />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
