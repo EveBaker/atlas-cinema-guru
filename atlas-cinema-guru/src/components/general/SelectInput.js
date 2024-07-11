@@ -1,7 +1,7 @@
 import React from 'react';
 import './general.css';
 
-const SelectInput = ({ label, options, value, onChange }) => {
+const SelectInput = ({ label, options, value, onClick }) => {
   return (
     <div className="select-input">
       {label && <label>{label}</label>}
