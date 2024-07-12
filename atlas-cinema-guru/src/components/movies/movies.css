@@ -65,3 +65,71 @@
 .input-wrapper label {
   color: #ff4d4d;
 }
+/*----------------------------------------- */
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-details {
+  padding: 10px;
+}
+
+.movie-details h3 {
+  margin: 0 0 10px;
+}
+
+.movie-details p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.movie-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.genre-tag {
+  background: #444;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.movie-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.favorite {
+  color: gold;
+}
+
+.watch-later {
+  color: lightblue;
+}
